@@ -7,6 +7,7 @@ SIMPLENOTE_PACKAGE_FILE = "resources/app/package.json"
 TEMP_FOLDER = "/tmp"
 TAR_GZ_EXT = ".tar.gz"
 
+
 def main(args):
     import getopt
 
@@ -33,6 +34,7 @@ def main(args):
         sys.exit(3)
 
     updateOrInstall(simpleNoteLocation)
+
 
 def updateOrInstall(location):
     import shutil
@@ -68,7 +70,7 @@ def updateOrInstall(location):
 
         # remove old if exist
         if os.path.isdir(location):
-            print("removing old version of Simplenote...")
+            print("removing old version of Simplenote")
             shutil.rmtree(location)
 
         # copy new
@@ -78,8 +80,9 @@ def updateOrInstall(location):
         print("removing temporary files")
         os.remove(downloadAbsolutePath)
 
-        print("installation complete.")
+        print("installation complete")
         sys.exit()
+
 
 def downloadAndExtract(url, downloadAbsolutePath):
     import tarfile
