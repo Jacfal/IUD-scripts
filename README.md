@@ -1,5 +1,5 @@
-# IUD-scripts
-Repository for my own various Installation, Update and Delete scripts.
+# local-script-config-repo
+My personal scripts & configs repo.
 
 ### iu-simplenote.py
 Script for installing or updating Simplenote app. 
